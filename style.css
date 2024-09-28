@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.video-container {
+    text-align: center; /* Centers the video */
+}
+
+video {
+    display: inline-block; /* Ensures the video behaves like a block-level element */
+    margin: 0 auto;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around; /* Space images evenly */
+    align-items: center;
+    gap: 20px; /* Optional spacing between images */
+    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
+}
+
+.image-gallery img {
+    max-width: 30%; /* Controls width of each image */
+    height: auto;   /* Maintains aspect ratio */
+}
