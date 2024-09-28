@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Karthik's Engineering Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Karthik Subramaniam's Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home </a>
+        <a href="mailto:karthik4subramaniam@gmail.com">Contact</a>
+        <a href="https://github.com/Karodee"> Github </a>
+        <a href="hobbies.html">Hobbies</a>
+    </nav>
+
+    <section id="Master Research">
+        <h2>Simulation of micro-robotic swimmers</h2>
+        <p>
+            As part of my master's research at Carnegie Mellon University, I am working under Professor Rebecca Taylor to study the mechanics and movements of micro-robotic structures. 
+            <ul>
+                <li>Developing novel methods to solve Fluid-Structure Interactions of micro-scale flexible structures on LS-Dyna</li>
+                <li>Optimizing the drag factors of different micro-swimmers to improve efficiency and speed of locomotion</li>
+                <li>Modelled electromagnetic forces acting on the swimmer. An oscillating magnettic field drives movement of the swimmer</li>
+            </ul>
+        </p>
+        <div class = "video-container">
+            <video controls width="600">
+                <source src="videos/mesh_movement.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="IDL Project">
+        <h2>Reinforcement Learning for time-series forecasting</h2>
+        <p>
+            As part of '11-785 Intro to Deep Learning' in CMU, My team and I created RLFinNet, a reinforcement learning-based model tailored to forecast financial time-series data. 
+            <ul>
+                <li>Achieved an accuracy of 2.1% better than state-of-the-art with a training time of only 110 seconds on an Nvidia Tesla T4</li>
+                <li>I rewrote the existing OneNet model to be more lightweight and streamline the input dimensions, weighing the adjusted close price as the most important. </li>
+            </ul>
+        </p>
+            
+        <div class="image-gallery">
+            <img src="images/MDT_20.png" alt="Random samples of ground truth vs prediction">
+            <img src="images/AGFS_20.png" alt="Random samples of ground truth vs prediction">
+            <img src="images/BA_20.png" alt="Random samples of ground truth vs prediction">
+        </div>
+            
+        <p>We chose this topic because the mathematics of forecasting data as unpredictable as financial data seemed very interesting. In the future, I would liike to revisit this project with more experience with financial markets.</p>
+        <p>
+            <a href="https://drive.google.com/file/d/1tIk4JyqCbIa65STHnLLXWUbqaOcZmHZj/view?usp=drive_link">Here</a> is a link to the project report
+            <a href="https://github.com/Naman-Choudhary-AI-ML/RLFinanceTimeSeries-OneNet">Here</a> is a link to the Github 
+        </p>
+    </section>
+
+    <section id="CFD Project">
+        <h2>Modelling inert gas flow in an Additive Manufacturing Chamber</h2>
+        <p>
+            As part of '24-718 Computational Fluid Dynamics' in CMU, My team and I wrote a Python script to solve Navier Stokes and model inert gas flow in an Additive Manufacturing chamber
+        </p>
+            <ul>
+                <li>I wrote the python script to solve the complete conservative Navier-Stokes Equation and sweep a combination of input and output locations</li>
+                <li>We were sensitive to three factors - Heat Transfer around the build plate, carrying spatter particles away from the build, and flushing the entire chamber with the inert gas </li>
+            </ul>
+
+
+        <div class="image-gallery">
+            <img src="images/VelocityVectors_1_0.png" alt="Simulation contour">
+            <img src="images/PressureContours_1_0.png" alt="Simulation contour">
+            <img src="images/TemperatureContours_1_0.png" alt="Simulation contour">
+        </div>
+        <p>
+            In this project, there is the lack of eddy currents formed. This might be a result of the changes to the dynamic viscosity. We were forced to make the gas very viscous to allow us to complete all the required simulations in time to complete the course.
+        </p>
+        <p>
+            <a href="https://drive.google.com/file/d/1tIk4JyqCbIa65STHnLLXWUbqaOcZmHZj/view?usp=drive_link">Here</a> is a link to the project report
+            <a href="https://github.com/Karodee/CFD-analysis-of-AM-Chamber">Here</a> is a link to the Github
+
+        </p>    
+    </section>
+
+
+    <section id="Undergrad Thesis">
+        <h2>Annealing Additive Manufactured Stainless Steel with Microwaves</h2>
+        <p>
+            For my undergraduate Thesis I worked under Dr Gururaj Telasang at The International Advanced Research Centre for Powder Metallurgy and New Materials. I worked on the effects of annealing Additively Manufactured Stainless steel with microwaves. After noticing this lacuna in the literature at the time, I investigated the effects of microwaves on the microstructure of Stainless steel.
+        </p>
+            <ul>
+                <li>I operated the SLM HL280 machine for Laser Powder bed fusion. I was also in charge of disassembling parts of the machine, cleaning them, and reassembling the whole machine.</li>
+                <li>I prepared, mounted and polished samples to perform metallography. I analyzed the vicker's hardness, Archimedes density, microstructure, and porosity. </li>
+                <li>Using microwaves, I was able to reduce the energy expenditure when compared to standard annealing by upto 40%</li>
+            </ul>
+
+
+        <div class="image-gallery">
+            <img src="images/test_coupons.jpg" alt="Test coupons">
+            <img src="images/Polishing.jpg" alt="Polsihing">
+            <img src="images/Hardness.jpg" alt="Hardness">
+        </div>
+        <p>
+            <a href="https://drive.google.com/file/d/1tmE11F8FBaiit46AFl27NvCAagHJ4Kxu/view?usp=drive_link">Here</a> is a link to my thesis report. 
+        </p>    
+    </section>
+
+    <section id="Techspark">
+        <h2>Clap-controlled Car</h2>
+        
+            This project produced a remotely controlled car that responds to claps to move forward, back, and stop, depending on the number of claps. The car responds to 2 claps to move forward, 3 claps to move backward, and 1 clap to halt.
+        </p>
+            
+
+
+        <img src="images/Clap-car.jpg" alt="Arduino car" style="display: block; margin: 0 auto; max-width: 50%; height: auto;">
+        
+        <p>
+            <a href="https://github.com/Karodee/Arduino-car/tree/main">Here</a> is a link to the Github
+
+        </p>    
+    </section>
+
+    <section id="Designs">
+        <h2>My fixtures and Designs</h2>
+        <p>
+            Here are some designs and fixtures that I have designed for smaller projects through my education
+        </p>
+            <ul>
+                <li>A converging-diverging Nozzle for a Potassiom salt model rocket that I designed and helped build</li>
+                <li>A design for an enginer that would be used for milling operations</li>
+                <li>A Shoulder to allow a standart UTM machine to perform microtensile testing reliably</li>
+                <li>A Fixture for a wire-arc cutter to fix an AM build plate so that we could take the builds off easily (build plate as seen in my Undergrad Thesis)</li>
+            </ul>
+
+
+        <div class="image-gallery">
+            <img src="images/CDNoz.jpg" alt="Nozzle">
+            <img src="images/Shoulder.jpg" alt="Shoulder">
+            <img src="images/Engine Mill.jpg" alt="Engine Mill">
+            <img src="images/Fixture.jpg" alt="Fixture">
+        </div>
+ 
+    </section>
+
+    <!-- <section id="skills"></section>
+        <h2>Skills</h2>
+        <ul>
+            <li>Computational Mechanics Modeling</li>
+            <li>Additive Manufacturing</li>
+            <li>Artificial Intelligence</li>
+            <li>Structural Engineering</li>
+            <li>Finite Element Analysis (FEA)</li>
+            <li>Python, MATLAB, C++</li>
+        </ul>
+    </section> -->
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email me at: <a href="mailto:karthik4subramaniam@gmail.com">karthik4subramaniam@gmail.com</a></p>
+        <p>Personal Phone - +1 (412) 339-6843</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Karthik Subramaniam. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
