@@ -6,6 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Samaksh's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add some styling to make the mosaic */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .mosaic-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .mosaic-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .mosaic-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .mosaic-item:hover img {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,59 +77,52 @@
         <a href="hobbies.html">Hobbies</a>
     </nav>
 
-    <!-- Kantor Lab Experience Project Preview -->
-    <section id="KantorLabExperience">
-        <h2>Graduate Research Assistant</h2>
-        <p><strong>Timeline:</strong> May 2024 - Aug 2024</p>
-        <a href="kantor-lab.html">
-            <img src="Videos/LeafBlower.gif" alt="Kantor Lab Project Video" width="300">
-        </a>
-    </section>
+    <!-- Mosaic of project links -->
+    <div class="mosaic-container">
 
-    <!-- Segmentation Project Preview -->
-    <section id="SegmentationProject">
-        <h2>Segmentation on Open-Source Datasets</h2>
-        <p><strong>Timeline:</strong> Spring 2024</p>
-        <a href="segmentation-project.html">
-            <img src="Pictures/VLR.png" alt="Segmentation Project Video" width="300">
-        </a>
-    </section>
+        <!-- Kantor Lab Experience Project -->
+        <div class="mosaic-item">
+            <a href="kantor-lab.html">
+                <img src="Videos/LeafBlower.gif" alt="Kantor Lab Project Video">
+            </a>
+        </div>
 
-    <!-- Sailboat Project Preview -->
-    <section id="SailboatProject">
-        <h2>Optimal Control of an Autonomous Sailboat</h2>
-        <p><strong>Timeline:</strong> Spring 2024</p>
-        <a href="sailboat-project.html">
-            <img src="Videos/sfla.historical.2024040606.gif" alt="Sailboat Project Video" width="300">
-        </a>
-    </section>
+        <!-- Segmentation Project -->
+        <div class="mosaic-item">
+            <a href="segmentation-project.html">
+                <img src="Pictures/VLR.png" alt="Segmentation Project Video">
+            </a>
+        </div>
 
-    <!-- I2GROW Project Preview -->
-    <section id="I2GROWProject">
-        <h2>I2GROW Systems Integration</h2>
-        <p><strong>Timeline:</strong> Fall 2023 - Spring 2024</p>
-        <a href="i2grow-project.html">
-            <img src="i2grow-video.gif" alt="I2GROW Project Video" width="300">
-        </a>
-    </section>
+        <!-- Sailboat Project -->
+        <div class="mosaic-item">
+            <a href="sailboat-project.html">
+                <img src="Videos/sfla.historical.2024040606.gif" alt="Sailboat Project Video">
+            </a>
+        </div>
 
-    <!-- Path Planning Project Preview -->
-    <section id="PathPlanningProject">
-        <h2>Imperative Path Planning</h2>
-        <p><strong>Timeline:</strong> Fall 2023</p>
-        <a href="path-planning-project.html">
-            <img src="IDL_Project.gif" alt="Path Planning Project Video" width="300">
-        </a>
-    </section>
+        <!-- I2GROW Project -->
+        <div class="mosaic-item">
+            <a href="i2grow-project.html">
+                <img src="i2grow-video.gif" alt="I2GROW Project Video">
+            </a>
+        </div>
 
-    <!-- Crack Detection Project Preview -->
-    <section id="CrackDetectionProject">
-        <h2>Wheeled Locomotive for Crack Detection</h2>
-        <p><strong>Timeline:</strong> Fall 2021</p>
-        <a href="crack-detection-project.html">
-            <img src="Videos/KF.gif" alt="Crack Detection Project Video" width="300">
-        </a>
-    </section>
+        <!-- Path Planning Project -->
+        <div class="mosaic-item">
+            <a href="path-planning-project.html">
+                <img src="IDL_Project.gif" alt="Path Planning Project Video">
+            </a>
+        </div>
+
+        <!-- Crack Detection Project -->
+        <div class="mosaic-item">
+            <a href="crack-detection-project.html">
+                <img src="Videos/KF.gif" alt="Crack Detection Project Video">
+            </a>
+        </div>
+
+    </div>
 
     <footer>
         <p>© 2024 Samaksh Judson. All Rights Reserved.</p>
