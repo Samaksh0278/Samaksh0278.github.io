@@ -71,6 +71,19 @@ footer p {
     .center-text {
         text-align: center;
     }
+    .image-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .image-container img {
+        width: 100%; /* You can adjust this percentage */
+        height: 500px; /* Set a fixed height for the image */
+        object-fit: cover; /* Ensures the image covers the entire area */
+    }
+    .image-label {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
 </style>
 
 
