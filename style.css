@@ -76,7 +76,7 @@ footer p {
         margin: 20px 0;
     }
     .image-container img {
-        width: 100%; /* You can adjust this percentage */
+        width: 80%; /* You can adjust this percentage */
         height: 500px; /* Set a fixed height for the image */
         object-fit: cover; /* Ensures the image covers the entire area */
     }
