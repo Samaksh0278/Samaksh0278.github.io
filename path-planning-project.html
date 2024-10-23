@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Imperative Path Planning</h1>
+        <h1>Learning-Based Robot Navigation</h1>
     </header>
 
     <nav>
@@ -20,21 +20,23 @@
     </nav>
 
     <section id="PathPlanningProject">
-        <h2>Imperative Path Planning</h2>
-        <p><strong>Tools Used:</strong> Python, ROS, Isaac Sim</p>
+        <h2>Learning-Based Robot Navigation</h2>
+        <p><strong>Tools Used:</strong> Python, ROS, Gazebo, CVAE, LSTM, PyPose</p>
         <p><strong>Project Timeline:</strong> Fall 2023</p>
 
+        <h3>Abstract</h3>
         <p>
-            This project involved the development of a novel <strong>unsupervised learning approach</strong> to train a path planning policy for robot perception and navigation. The goal was to enhance the robot's ability to navigate complex environments with minimal data.
+            We introduce a unified learning-based framework for real-time autonomous navigation in complex environments, integrating perception and path planning into a single pipeline. Building upon the iPlanner, an end-to-end policy planning model originally developed for ground robots, we adapt its Bi-Level Optimization (BLO) process for efficient navigation, creating safe and dynamically feasible trajectories through an improved state representation. This framework incorporates spatiotemporal dependencies using a pre-trained Convolutional Variational Autoencoder (CVAE) and Long Short-Term Memory (LSTM) networks. The system is trained entirely in simulated environments, reducing the sim-to-real gap and achieving high navigation success rates in challenging environments.
         </p>
 
-        <ul>
-            <li><strong>Unsupervised Path Planning:</strong> Designed and implemented an unsupervised learning method to train a robot's path planning policy, significantly improving its perception and navigation capabilities without requiring large labeled datasets.</li>
-            <li><strong>Bi-level Trajectory Optimization:</strong> Addressed the limitations of conventional unsupervised learning techniques by employing a bi-level trajectory optimization strategy, achieving state-of-the-art (SOTA) performance in <strong>zero-shot obstacle avoidance</strong> and <strong>waypoint generation</strong>.</li>
-        </ul>
-
+        <h3>Procedure</h3>
         <p>
-            This project demonstrates my expertise in <strong>robotic navigation</strong> and <strong>unsupervised learning</strong>, showing how advanced optimization techniques can enhance a robot's ability to navigate and avoid obstacles in real-time.
+            The project utilized a Bi-Level Optimization (BLO) process to generate dynamically feasible trajectories. The perception module employed a Convolutional Variational Autoencoder (CVAE) to extract low-dimensional feature representations from depth images. This reduced noise and enhanced the perceptual quality of the system. The planning network then used these features along with the goal position to generate keypoint paths through an LSTM-based sequence generator. Each keypoint was optimized using a cubic spline interpolation for smooth transitions between waypoints. Data augmentation techniques such as blur, gamma correction, and random noise were applied to make the system robust against real-world environmental conditions.
+        </p>
+
+        <h3>Conclusion and Future Work</h3>
+        <p>
+            In conclusion, our Bi-Level Optimization framework demonstrates comparable performance to state-of-the-art models in complex navigation scenarios, achieving an 88% navigation success rate. However, the number of keypoints remains a hard-coded hyperparameter that constrains the system in some scenarios. Future work will focus on dynamic keypoint generation based on real-time environmental feedback to improve adaptability. Additionally, we plan to extend this work to hardware implementations and reduce model size further to fit on embedded systems for real-time operations.
         </p>
     </section>
 
