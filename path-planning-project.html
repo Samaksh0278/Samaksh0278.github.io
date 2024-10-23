@@ -26,7 +26,22 @@
 
         <h3>Abstract</h3>
         <p>
-            We introduce a unified learning-based framework for real-time autonomous navigation in complex environments, integrating perception and path planning into a single pipeline. Building upon the iPlanner, an end-to-end policy planning model originally developed for ground robots, we adapt its Bi-Level Optimization (BLO) process for efficient navigation, creating safe and dynamically feasible trajectories through an improved state representation. This framework incorporates spatiotemporal dependencies using a pre-trained Convolutional Variational Autoencoder (CVAE) and Long Short-Term Memory (LSTM) networks. The system is trained entirely in simulated environments, reducing the sim-to-real gap and achieving high navigation success rates in challenging environments.
+            We introduce a unified learning-based framework for real-time autonomous navigation in complex environments, integrating perception and path planning into a
+single pipeline. Building upon the iPlanner, an end-to-end policy planning model
+originally developed for ground robots, we adapt its Bi-Level Optimization (BLO)
+process for efficient navigation, creating safe and dynamically feasible trajectories through an improved state representation and incorporating spatiotemporal
+dependencies within the network. Central to our approach is the application of
+a pre-trained Convolutional Variational Autoencoder (CVAE) which efficiently
+extracts crucial features from depth images and simultaneously mitigates highfrequency noise. The low-dimensional rich information is fused with an expanded
+goal representation to feed downstream planning tasks. We exploit the spatiotemporal sequential nature of the planning task with Long short-term memory
+(LSTM) networks to generate an extended sequence of keypoint paths. Our loss
+function uses the optimization process to prioritize the safety and dynamic feasibility of the paths generated. We train our model entirely in simulated environments,
+employing various data augmentation techniques to reduce the sim2real gap. We
+present the results of our ablation study for our pre-trained CVAE, trained our
+end-to-end pipeline, and show comparable results to iPlanner while succeeding
+in cases where large obstacles are present. We also show our Navigation Success
+Rate is around 88 % which is close to the iPlanner paper (86 %) while being very
+light. Finally, we set the stage for future hardware implementation.
         </p>
 
         <h3>Procedure</h3>
