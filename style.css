@@ -84,6 +84,11 @@ footer p {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
+    .short-image {
+            height: 300px; /* Set a specific height for this image */
+            width: auto;   /* Maintain the aspect ratio */
+            object-fit: cover;
+        }
     .gif-container {
             display: flex;
             justify-content: space-between;
