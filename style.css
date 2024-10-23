@@ -91,19 +91,20 @@ footer p {
         }
     .gif-container {
             display: flex;
-            justify-content: space-between;
-            gap: 30px; /* Adds gap between the GIFs */
+            justify-content: space-between; /* Distributes space evenly between the GIFs */
+            gap: 30px; /* Adjusts the gap between the GIFs */
+            margin: 20px 0; /* Adds some margin above and below the GIF section */
         }
         .gif-item {
+            flex: 1; /* Ensures that both GIFs take up equal space */
             text-align: center;
-            width: 48%; /* Ensures the GIFs and their labels are aligned properly */
         }
         .gif-item img {
-            width: 100%; /* Makes sure the GIF fills the container */
-            height: auto;
+            width: 100%; /* Adjusts the size of the GIFs to fit within their container */
+            height: auto; /* Maintains the aspect ratio */
         }
         .gif-label {
-            margin-top: 10px;
+            margin-bottom: 10px; /* Adds space between the label and the GIF */
             font-size: 1.2rem;
         }
 </style>
