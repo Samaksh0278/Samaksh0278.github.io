@@ -84,6 +84,23 @@ footer p {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
+    .gif-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px; /* Adds gap between the GIFs */
+        }
+        .gif-item {
+            text-align: center;
+            width: 48%; /* Ensures the GIFs and their labels are aligned properly */
+        }
+        .gif-item img {
+            width: 100%; /* Makes sure the GIF fills the container */
+            height: auto;
+        }
+        .gif-label {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
 </style>
 
 
