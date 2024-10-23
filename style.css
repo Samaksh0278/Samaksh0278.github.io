@@ -67,6 +67,12 @@ footer p {
 .video-container {
     text-align: center; /* Centers the video */
 }
+<style>
+    .center-text {
+        text-align: center;
+    }
+</style>
+
 
 video {
     display: inline-block; /* Ensures the video behaves like a block-level element */
