@@ -27,32 +27,38 @@
         <h3>Abstract</h3>
         <p>
             We introduce a unified learning-based framework for real-time autonomous navigation in complex environments, integrating perception and path planning into a
-single pipeline. Building upon the iPlanner, an end-to-end policy planning model
-originally developed for ground robots, we adapt its Bi-Level Optimization (BLO)
-process for efficient navigation, creating safe and dynamically feasible trajectories through an improved state representation and incorporating spatiotemporal
-dependencies within the network. Central to our approach is the application of
-a pre-trained Convolutional Variational Autoencoder (CVAE) which efficiently
-extracts crucial features from depth images and simultaneously mitigates highfrequency noise. The low-dimensional rich information is fused with an expanded
-goal representation to feed downstream planning tasks. We exploit the spatiotemporal sequential nature of the planning task with Long short-term memory
-(LSTM) networks to generate an extended sequence of keypoint paths. Our loss
-function uses the optimization process to prioritize the safety and dynamic feasibility of the paths generated. We train our model entirely in simulated environments,
-employing various data augmentation techniques to reduce the sim2real gap. We
-present the results of our ablation study for our pre-trained CVAE, trained our
-end-to-end pipeline, and show comparable results to iPlanner while succeeding
-in cases where large obstacles are present. We also show our Navigation Success
-Rate is around 88 % which is close to the iPlanner paper (86 %) while being very
-light. Finally, we set the stage for future hardware implementation.
+            single pipeline. Building upon the iPlanner, an end-to-end policy planning model
+            originally developed for ground robots, we adapt its Bi-Level Optimization (BLO)
+            process for efficient navigation, creating safe and dynamically feasible trajectories through an improved state representation and incorporating spatiotemporal
+            dependencies within the network. Central to our approach is the application of
+            a pre-trained Convolutional Variational Autoencoder (CVAE) which efficiently
+            extracts crucial features from depth images and simultaneously mitigates highfrequency noise. The low-dimensional rich information is fused with an expanded
+            goal representation to feed downstream planning tasks. We exploit the spatiotemporal sequential nature of the planning task with Long short-term memory
+            (LSTM) networks to generate an extended sequence of keypoint paths. Our loss
+            function uses the optimization process to prioritize the safety and dynamic feasibility of the paths generated. We train our model entirely in simulated environments,
+            employing various data augmentation techniques to reduce the sim2real gap. We
+            present the results of our ablation study for our pre-trained CVAE, trained our
+            end-to-end pipeline, and show comparable results to iPlanner while succeeding
+            in cases where large obstacles are present. We also show our Navigation Success
+            Rate is around 88 % which is close to the iPlanner paper (86 %) while being very
+            light. Finally, we set the stage for future hardware implementation.
         </p>
 
-        <h3>Procedure</h3>
-        <p>
-            The project utilized a Bi-Level Optimization (BLO) process to generate dynamically feasible trajectories. The perception module employed a Convolutional Variational Autoencoder (CVAE) to extract low-dimensional feature representations from depth images. This reduced noise and enhanced the perceptual quality of the system. The planning network then used these features along with the goal position to generate keypoint paths through an LSTM-based sequence generator. Each keypoint was optimized using a cubic spline interpolation for smooth transitions between waypoints. Data augmentation techniques such as blur, gamma correction, and random noise were applied to make the system robust against real-world environmental conditions.
-        </p>
+        
 
         <h3>Conclusion and Future Work</h3>
         <p>
-            In conclusion, our Bi-Level Optimization framework demonstrates comparable performance to state-of-the-art models in complex navigation scenarios, achieving an 88% navigation success rate. However, the number of keypoints remains a hard-coded hyperparameter that constrains the system in some scenarios. Future work will focus on dynamic keypoint generation based on real-time environmental feedback to improve adaptability. Additionally, we plan to extend this work to hardware implementations and reduce model size further to fit on embedded systems for real-time operations.
-        </p>
+            In this work, we addressed the challenges of robot navigation with a robust methodology to cope with
+            real-world variability and dynamic constraints. Our bi-level optimization leverages the deterministic
+            nature of trajectory planning to guide a stochastic neural network, enhancing path dynamic feasibility.
+            To improve our baseline iPlanner, we presented a lighter model where we reasoned about the state
+            representation and the planning task logic. On the one hand, the integration of a VAE-trained encoder
+            enriches feature extraction and perceptual understanding of the state to benefit all downstream
+            planning tasks. On the other hand, spatiotemporal dependencies between key points of the resulting
+            path are being captured with an LSTM-based sequence generator. Our results showed comparable
+            performance against our baseline, particularly in complex scenarios. However, the number of key
+            points is still a hard-coded hyperparameter which emerged as a limitation, indicating the need for a
+            dynamic key point determination mechanism in future enhancements. 
     </section>
 
     <footer>
