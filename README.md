@@ -1,2 +1,2 @@
 # Website
-This is the github repo holding the codebase for my personal website. Please take a look!
+This is a repo holding the codebase for my personal website. Please take a look!
