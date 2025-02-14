@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kantor Lab Project</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .image-row figure {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -41,6 +52,29 @@
         <p>
             This project highlights my skills in <strong>computer vision</strong>, <strong>robotics</strong>, and <strong>system integration</strong> for agricultural automation, contributing to advancements in smart farming technologies.
         </p>
+    </section>
+
+    <section id="project-images">
+        <h2>Project Images</h2>
+        
+        <div class="image-row">
+            <figure>
+                <img src="Pictures/LEAFBLOWER PIC 1.png" alt="Full view of the leafblower system" width="600">
+                <figcaption>Figure 1: The complete leafblower actuation system used to reveal occluded fruits.</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="Pictures/LEAFBLOWER PIC 3.png" alt="Segmentation output from the camera on the leafblower" width="600">
+                <figcaption>Figure 3: Segmentation output from the finetuned YOLOv8 model, input from the onboard camera, highlighting detected fruits.</figcaption>
+            </figure>
+        </div>
+        
+        <div class="image-row">
+            <figure>
+                <img src="Pictures/LEAFBLOWER PIC 4.png" alt="Close-up of the wind vanes in the front of the leafblower" width="600">
+                <figcaption>Figure 2: Close-up of the actuated wind vanes that direct airflow to high-density areas.</figcaption>
+            </figure>
+        </div>
     </section>
 
     <footer>
